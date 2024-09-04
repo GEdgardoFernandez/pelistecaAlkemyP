@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Axios from "axios";
 function Login() {
@@ -22,7 +23,7 @@ function Login() {
             alert("Email or password cannot be empty");
         };
         Axios.post('http://challenge-react.alkemy.org/', {email, password}).then((response) => {
-            alert(response.data);
+            console.log(response.data);
         })
     }
     return (
